@@ -153,12 +153,12 @@ function resizeCanvas() {
   viewport.dpr = Math.min(window.devicePixelRatio || 1, 2);
   canvas.width = Math.floor(rect.width * viewport.dpr);
   canvas.height = Math.floor(rect.height * viewport.dpr);
-  
+
   const isTouchUi = document.body.classList.contains("touch-ui");
   const zoomFactor = isTouchUi ? 0.76 : 1;
   const scaleY = (viewport.height / WORLD_HEIGHT) * zoomFactor;
   const scaleX = viewport.width / (isTouchUi ? 760 : 1000);
-  
+
   viewport.scale = Math.min(scaleY, scaleX);
   viewport.viewWidth = viewport.width / viewport.scale;
 }
@@ -380,17 +380,17 @@ function generateLevel() {
     platform.type = "moving";
     platform.motion = Math.random() < 0.55
       ? {
-          axis: "x",
-          amplitude: rand(28, 54),
-          speed: rand(1.1, 1.6),
-          phase: rand(0, Math.PI * 2),
-        }
+        axis: "x",
+        amplitude: rand(28, 54),
+        speed: rand(1.1, 1.6),
+        phase: rand(0, Math.PI * 2),
+      }
       : {
-          axis: "y",
-          amplitude: rand(14, 28),
-          speed: rand(1.1, 1.55),
-          phase: rand(0, Math.PI * 2),
-        };
+        axis: "y",
+        amplitude: rand(14, 28),
+        speed: rand(1.1, 1.55),
+        phase: rand(0, Math.PI * 2),
+      };
   }
 
   const fragileCandidates = path
@@ -1211,7 +1211,7 @@ function draw() {
 
   ctx.save();
   ctx.scale(viewport.scale, viewport.scale);
-  
+
   const viewHeight = viewport.height / viewport.scale;
   const offsetY = Math.max(0, (viewHeight - WORLD_HEIGHT) * 0.5);
 

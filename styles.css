@@ -353,7 +353,7 @@ body.touch-ui .glass-button.secondary {
 body.touch-ui .mobile-controls {
   left: max(0.8rem, env(safe-area-inset-left, 0px));
   right: max(0.8rem, env(safe-area-inset-right, 0px));
-  bottom: calc(4.6rem + env(safe-area-inset-bottom, 0px));
+  bottom: calc(6.5rem + env(safe-area-inset-bottom, 0px));
   gap: 0.8rem;
 }
 
@@ -495,6 +495,6 @@ body.touch-ui .control-button.jump {
   }
 
   body.touch-ui .mobile-controls {
-    bottom: calc(5.3rem + env(safe-area-inset-bottom, 0px));
+    bottom: calc(7.5rem + env(safe-area-inset-bottom, 0px));
   }
 }

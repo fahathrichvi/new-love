@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Fahath x Rustha</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;800&family=Sora:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="scene">
+    <div class="bg-gradient"></div>
+    <div class="floating-shapes" aria-hidden="true">
+      <span class="shape shape-a"></span>
+      <span class="shape shape-b"></span>
+      <span class="shape shape-c"></span>
+      <span class="shape shape-d"></span>
+      <span class="shape shape-e"></span>
+    </div>
+
+    <main class="game-shell">
+      <canvas id="gameCanvas" aria-label="Fahath and Rustha platformer"></canvas>
+
+      <section class="hud glass-panel">
+        <div class="hud-group">
+          <p class="eyebrow">Love Run</p>
+          <h1>FAHATH <span>for</span> RUSTHA</h1>
+        </div>
+
+        <div class="hud-stats">
+          <div class="stat-card">
+            <span class="stat-label">Letters</span>
+            <strong id="lettersProgress">_ _ _ _ _ _</strong>
+          </div>
+          <div class="stat-card">
+            <span class="stat-label">Twist</span>
+            <strong id="statusText">Stay light on your feet</strong>
+          </div>
+          <div class="stat-card">
+            <span class="stat-label">Lives</span>
+            <strong id="livesCount">3</strong>
+          </div>
+          <div class="stat-card">
+            <span class="stat-label">Lost Hearts</span>
+            <strong id="deathCount">0</strong>
+          </div>
+        </div>
+
+        <button id="replayButton" class="glass-button secondary" type="button">Play Again</button>
+      </section>
+
+      <section class="instructions glass-panel">
+        <span>Desktop: Arrow keys, Up Arrow, or Space</span>
+        <span>Mobile: Use the glowing controls</span>
+      </section>
+
+      <section class="overlay active" id="startOverlay" aria-live="polite">
+        <div class="overlay-card glass-panel hero-card">
+          <p class="eyebrow">Devil Level Love Story</p>
+          <h2>Collect <span>RUSTHA</span> in order.</h2>
+          <p>
+            Every run rebuilds the world with new traps, fake floors, moving platforms,
+            hidden tricks, and one fair path made just for FAHATH.
+          </p>
+          <p>Start each run with 3 loving little lives.</p>
+          <div class="overlay-actions">
+            <button id="startButton" class="glass-button primary" type="button">Start The Run</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="overlay" id="winOverlay" aria-live="polite">
+        <div class="overlay-card glass-panel final-card">
+          <div class="heart-burst" aria-hidden="true">
+            <span>❤</span>
+            <span>❤</span>
+            <span>❤</span>
+            <span>❤</span>
+            <span>❤</span>
+          </div>
+          <p class="eyebrow">Level Complete</p>
+          <h2>💘 FAHATH ❤️ RUSTHA 💘</h2>
+          <p>Even through every challenge, I choose you 💖</p>
+          <button id="winReplayButton" class="glass-button primary" type="button">Play Again</button>
+        </div>
+      </section>
+
+      <section class="overlay" id="loseOverlay" aria-live="polite">
+        <div class="overlay-card glass-panel final-card">
+          <p class="eyebrow">Out Of Lives</p>
+          <h2>Three hearts, one more try</h2>
+          <p id="loseMessage">The traps won this round, but love deserves another run.</p>
+          <button id="loseReplayButton" class="glass-button primary" type="button">Play Again</button>
+        </div>
+      </section>
+
+      <section class="mobile-controls" aria-label="Mobile controls">
+        <div class="mobile-group">
+          <button class="control-button" data-control="left" type="button">◀</button>
+          <button class="control-button" data-control="right" type="button">▶</button>
+        </div>
+        <button class="control-button jump" data-control="jump" type="button">▲</button>
+      </section>
+    </main>
+  </div>
+
+  <script src="main.js" defer></script>
+</body>
+</html>
